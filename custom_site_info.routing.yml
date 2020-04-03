@@ -1,0 +1,12 @@
+custom_site_info.showpagejson:
+  path: '/page_json/{site_api_key}/{node}'
+  defaults:
+    _controller: '\Drupal\custom_site_info\Controller\ShowPageJson::NodeAccess'
+  options:
+      parameters:
+        site_api_key:
+          type: String
+        node:
+          type: entity:node
+  requirements:
+    _permission: 'access content'

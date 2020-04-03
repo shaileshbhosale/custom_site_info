@@ -1,0 +1,5 @@
+name: 'Custom Site Info'
+type: module
+description: 'Add / update site information'
+core: 8.x
+package: 'Custom'

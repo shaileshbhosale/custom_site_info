@@ -1,0 +1,13 @@
+{
+    "name": "custom_site_info",
+    "type": "drupal-module",
+    "description": "Add / update site information",
+    "keywords": [
+    ],
+    "homepage": "https://www.drupal.org/project/custom_site_info",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/custom_site_info",
+        "source": "http://cgit.drupalcode.org/custom_site_info",
+    },
+}
