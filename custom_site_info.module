@@ -19,5 +19,6 @@ function custom_site_info_form_alter(&$form, &$form_state, $form_id) {
  * Implements hook_uninstall().
  */
 function custom_site_info_uninstall() {
+    // Remove siteapikey config on module uninstall
     \Drupal::configFactory()->getEditable('system.site')->clear('siteapikey')->save();
   }
