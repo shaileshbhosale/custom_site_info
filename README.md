@@ -8,3 +8,6 @@ This module needs to alter the existing Drupal "Site Information" form.
 
 ## Total time to complete task
 6 Hours
+
+## Note
+It is not very clear whether to change text of "Save configuration" button to "Update Configuration" after adding Site API Key or keep it changed forever. For now I have changed it to "Update Configuration" in any condition. But it can be changed depending on whether Site API Key is entered or not.

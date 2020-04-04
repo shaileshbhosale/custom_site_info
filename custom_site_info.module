@@ -9,10 +9,8 @@
  * Implements hook_form_alter().
  */
 function custom_site_info_form_alter(&$form, &$form_state, $form_id) {
-    // Get site api key from configuration
-    $site_api_key = \Drupal::config('system.site')->get('siteapikey');
-    // Change submit button label if form id is custom_site_info_form and site api key is entered.
-    if ($form_id == 'custom_site_info_form' && $site_api_key) {
+    // Change submit button label.
+    if ($form_id == 'custom_site_info_form') {
         $form['actions']['submit']['#value'] = t('Update Configuration');
     }
   }
