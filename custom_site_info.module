@@ -9,16 +9,8 @@
  * Implements hook_form_alter().
  */
 function custom_site_info_form_alter(&$form, &$form_state, $form_id) {
-    // Change submit button label.
-    if ($form_id == 'custom_site_info_form') {
-        $form['actions']['submit']['#value'] = t('Update Configuration');
-    }
+  // Change submit button label.
+  if ($form_id == 'custom_site_info_form') {
+    $form['actions']['submit']['#value'] = t('Update Configuration');
   }
-
-/**
- * Implements hook_uninstall().
- */
-function custom_site_info_uninstall() {
-    // Remove siteapikey config on module uninstall
-    \Drupal::configFactory()->getEditable('system.site')->clear('siteapikey')->save();
-  }
+}

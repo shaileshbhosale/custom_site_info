@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 namespace Drupal\custom_site_info\Routing;
 
 use Drupal\Core\Routing\RouteSubscriberBase;
@@ -13,8 +14,9 @@ class RouteSubscriber extends RouteSubscriberBase {
    * {@inheritdoc}
    */
   protected function alterRoutes(RouteCollection $collection) {
-    if ($route = $collection->get('system.site_information_settings')) 
+    if ($route = $collection->get('system.site_information_settings')) {
       $route->setDefault('_form', 'Drupal\custom_site_info\Form\CustomSiteInfoForm');
+    }
   }
 
 }

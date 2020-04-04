@@ -21,9 +21,9 @@ class CustomSiteInfoForm extends SiteInformationForm {
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    // Get system site configurations
+    // Get system site configurations.
     $site_config = $this->config('system.site');
-    $form =  parent::buildForm($form, $form_state);
+    $form = parent::buildForm($form, $form_state);
     $form['site_information']['siteapikey'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Site API Key'),
@@ -41,15 +41,15 @@ class CustomSiteInfoForm extends SiteInformationForm {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    // Get system site configurations
+    // Get system site configurations.
     $site_config = $this->config('system.site');
-    // Get site api key from form
+    // Get site api key from form.
     $site_api_key = $form_state->getValue('siteapikey');
-    // Save site api key
+    // Save site api key.
     $site_config->set('siteapikey', $site_api_key)->save();
     parent::submitForm($form, $form_state);
 
-    // Show message after save
+    // Show message after save.
     $this->messenger()->addMessage($this->t('Site API Key has been saved with value: %value', ['%value' => $site_api_key]));
   }
 
