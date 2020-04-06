@@ -34,6 +34,7 @@ class CustomSiteInfoForm extends SiteInformationForm {
       '#placeholder' => t('No API Key yet'),
       '#weight' => '3',
     ];
+    $form['actions']['submit']['#value'] = t('Update Configuration');
     return $form;
   }
 
