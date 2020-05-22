@@ -1,5 +1,5 @@
 # Requirements
-This module needs to alter the existing Drupal "Site Information" form.
+This module needs to alter the existing Drupal "Site Information" form.<br>
 When logged in as the administrator, the "Site Information" form can be found at the path /admin/config/system/site-information.
 Specifics:
 - A new form text field named "Site API Key" needs to be added to the "Site Information" form with the default value of “No API Key yet”.
